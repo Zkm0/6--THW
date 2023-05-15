@@ -1,143 +1,50 @@
 
+/* Body styling */
 body {
-  background-color: #f5f5f5;
-  font-family: 'Helvetica Neue', sans-serif;
-}
-
-h3 {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-#form input[type="text"],
-#form textarea,
-#updateForm input[type="text"],
-#updateForm textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: none;
-}
-
-#form button,
-#updateForm button {
-  background-color: #a7c5eb;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-#form button:hover,
-#updateForm button:hover {
-  background-color: #7991b1;
-}
-
-#bucketlist {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  list-style: none;
-  padding: 0;
-}
-
-.bucket-list-item {
-  margin: 30px;
-  padding: 20px;
-  width: 25%;
-  border-radius: 10px;
-  background-color: #f1e3e8;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.bucket-list-item:hover {
-  background-color: #e8d2de;
-  cursor: pointer;
-}
-
-.bucket-list-item h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: #3d405b;
-}
-
-.bucket-list-item p {
-  margin-bottom: 10px;
-  color: #696e74;
-}
-
-.bucket-list-item a {
-  color: #a7c5eb;
-}
-
-.bucket-list-item a:hover {
-  color: #7991b1;
-}
-
-#deleteButton {
-  background-color: #e27d60;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-#deleteButton:hover {
-  background-color: #c4472d;
-}
-
-#updateForm label {
-  display: block;
-  margin-bottom: 10px;
-  color: #696e74;
-}
-
-#updateForm input[type="range"] {
-  width: 100%;
-}
-
-#updateForm button[type="submit"] {
-  background-color: #a7c5eb;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-#updateForm button[type="submit"]:hover {
-  background-color: #7991b1;
-}
-
-#explore {
-  background-color: #f5f5f5;
-  padding: 30px;
-}
-
-.exploreItem img {
-  width: 100px;
-  height: 100px;
-  margin-right: 20px;
-  border-radius: 50%;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.exploreItem h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: #3d405b;
-}
-
-.exploreItem p {
-  margin-bottom: 10px;
-  color: #696e74;
-}
-
-
+  background-color: #f7ede2;
+  }
+  
+  /* Header styling */
+  [data-role="header"] {
+  background-color: #f7f3e9;
+  }
+  
+  /* Navbar styling */
+  [data-role="navbar"] {
+  background-color: #ede4e0;
+  }
+  
+  /* Content styling */
+  [data-role="content"] {
+  background-color: #e9e5e1;
+  }
+  
+  /* Footer styling */
+  [data-role="footer"] {
+  background-color: #f7f3e9;
+  }
+  
+  /* Explore item styling */
+  .exploreItem {
+  background-color: #ede4e0;
+  }
+  
+  /* Button styling */
+  .ui-btn {
+  background-color: #f7ede2;
+  border-color: #ede4e0;
+  color: #ede4e0;
+  }
+  
+  /* Active button styling */
+  .ui-btn-active {
+  background-color: #ede4e0;
+  border-color: #ede4e0;
+  color: #f7ede2;
+  }
+  
+  
+  
+  
+  
+  
