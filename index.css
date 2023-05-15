@@ -1,46 +1,143 @@
 
-.exploreItem img {
-    width: 100px;  
-    height: 100px; 
-    margin-right: 20px;
-
-  }
-#bucketlist {
-  display: flex;
-  flex-direction: row auto;
-  justify-content: center;
-  align-items: center;
-  width: -5%;
-  height: 50vh;
-  list-style: none;
-  padding: 0;
+body {
+  background-color: #f5f5f5;
+  font-family: 'Helvetica Neue', sans-serif;
 }
-  
-  #bucketlist li {
-    margin: 50px;
-    padding: 10px;
-    width: 20%; /* adjust as needed */
-    border: 1px solid #ccc; /* adjust as needed */
-    border-radius: 10px; /* adjust as needed */
-    background-color: #7991b1; /* adjust as needed */
-    text-align: center;
-  }
-  #bucketlist li:hover {
-  background-color: #ddd; 
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#form input[type="text"],
+#form textarea,
+#updateForm input[type="text"],
+#updateForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+#form button,
+#updateForm button {
+  background-color: #a7c5eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
   cursor: pointer;
 }
 
-.exploreItem li {
+#form button:hover,
+#updateForm button:hover {
+  background-color: #7991b1;
+}
+
+#bucketlist {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  width: 20px; /* adjust as needed */
-  height: 20px; /* adjust as needed */
-  margin: 20px; /* adjust this to increase or decrease space between items */
-  border: 1px solid #ccc; /* adjust as needed */
-  border-radius: 5px; /* adjust as needed */
-  background-color: #f8f8f8; 
-  text-align: center;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+.bucket-list-item {
+  margin: 30px;
+  padding: 20px;
+  width: 25%;
+  border-radius: 10px;
+  background-color: #f1e3e8;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bucket-list-item:hover {
+  background-color: #e8d2de;
+  cursor: pointer;
+}
+
+.bucket-list-item h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #3d405b;
+}
+
+.bucket-list-item p {
+  margin-bottom: 10px;
+  color: #696e74;
+}
+
+.bucket-list-item a {
+  color: #a7c5eb;
+}
+
+.bucket-list-item a:hover {
+  color: #7991b1;
+}
+
+#deleteButton {
+  background-color: #e27d60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#deleteButton:hover {
+  background-color: #c4472d;
+}
+
+#updateForm label {
+  display: block;
+  margin-bottom: 10px;
+  color: #696e74;
+}
+
+#updateForm input[type="range"] {
+  width: 100%;
+}
+
+#updateForm button[type="submit"] {
+  background-color: #a7c5eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#updateForm button[type="submit"]:hover {
+  background-color: #7991b1;
+}
+
+#explore {
+  background-color: #f5f5f5;
+  padding: 30px;
+}
+
+.exploreItem img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.exploreItem h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #3d405b;
+}
+
+.exploreItem p {
+  margin-bottom: 10px;
+  color: #696e74;
 }
 
 
