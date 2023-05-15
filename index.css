@@ -1,0 +1,46 @@
+
+.exploreItem img {
+    width: 100px;  
+    height: 100px; 
+    margin-right: 20px;
+
+  }
+#bucketlist {
+  display: flex;
+  flex-direction: row auto;
+  justify-content: center;
+  align-items: center;
+  width: -5%;
+  height: 50vh;
+  list-style: none;
+  padding: 0;
+}
+  
+  #bucketlist li {
+    margin: 50px;
+    padding: 10px;
+    width: 20%; /* adjust as needed */
+    border: 1px solid #ccc; /* adjust as needed */
+    border-radius: 10px; /* adjust as needed */
+    background-color: #7991b1; /* adjust as needed */
+    text-align: center;
+  }
+  #bucketlist li:hover {
+  background-color: #ddd; 
+  cursor: pointer;
+}
+
+.exploreItem li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px; /* adjust as needed */
+  height: 20px; /* adjust as needed */
+  margin: 20px; /* adjust this to increase or decrease space between items */
+  border: 1px solid #ccc; /* adjust as needed */
+  border-radius: 5px; /* adjust as needed */
+  background-color: #f8f8f8; 
+  text-align: center;
+}
+
+

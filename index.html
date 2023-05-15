@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bucket List</title>
+  
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+  <div data-role="page" id="home">
+    <div data-role="header">
+      <h1>Bucket List</h1>
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#dataentry">Create New</a></li>
+          <li><a href="#display">Bucket List</a></li>
+          <li><a href="#explore" class="ui-btn-active">Explore</a></li> 
+        </ul> 
+      </div>
+      
+    </div>
+    <div data-role="content">
+      <p>Welcome to Your Bucket List app!</p>
+      <h3>Make it Happen.</h3>
+      <p>Put the things you want to do in life, and keep track of your progress.</p>
+    </div>
+    <div data-role="footer">
+      <h4>&copy; Zoe and Eyob Prog209 2023</h4>
+    </div>
+  </div>
+
+  <div data-role="page" id="explore">
+    <div data-role="header">
+      <h1>Explore</h1>
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#dataentry">Create New</a></li>
+          <li><a href="#display">Bucket List</a></li>
+          <li><a href="#explore" class="ui-btn-active">Explore</a></li> 
+        </ul>
+      </div>
+    </div>
+    <div data-role="content">
+    <h2 class="explore">Explore</h2>
+    <ul id="explorelist" class="flex-container">
+      <li class="exploreItem">
+        <a href="https://www.youtube.com/watch?v=IMVru2Imr7k" class="pick-item" target="_blank">How to Become Debt-Free</a>
+        <h2>Become Debt-Free</h2>
+        <button class="add-item">Add to bucket list</button>
+      </li>
+      <li class="exploreItem">
+        <a href="https://www.youtube.com/watch?v=PcTnRfU_xzs" class="pick-item" target="_blank">How to Buy Your First Home</a>
+        <h2>Buy a Home</h2>
+        <button class="add-item">Add to bucket list</button>
+      </li>
+      <li class="exploreItem">
+        <a href="https://www.youtube.com/watch?v=ysYYxkUVLJc" class="pick-item" target="_blank">Things You Should Know Before You Get Married</a>
+        <h2>Get Married</h2>
+        <button class="add-item">Add to bucket list</button>
+      </li>
+    </ul>
+  </div>
+    
+    <div data-role="footer">
+      <h4>&copy; Zoe and Eyob Prog209 2023</h4>
+    </div>
+  </div>
+
+  <div data-role="page" id="dataentry">
+    <div data-role="header">
+      <h1>New Bucket List Item</h1>
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#dataentry" class="ui-btn-active">Create New</a></li>
+          <li><a href="#display">Bucket List</a></li>
+          <li><a href="#explore">Explore</a></li>
+        </ul>
+      </div>
+    </div>
+    <div data-role="content">
+      <h2>New Bucket List Item</h2>
+      <form id="form">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" required>
+        <label for="description">Description:</label>
+        <textarea name="description" id="description"></textarea>
+        <label for="progress">Progress:</label>
+        <input type="number" name="progress" id="progress" value="0" min="0" max="100" required>
+        <label for="imageurl">URL:</label>
+        <input type="url" name="imageurl" id="imageurl">
+        <input type="submit" value="Add">
+      </form>
+    </div>
+    <div data-role="footer">
+      <h4>&copy; Zoe and Eyob Prog209 2023</h4>
+    </div>
+  </div>
+  
+
+ <div data-role="page" id="display">
+  <div data-role="header">
+    <h1>Bucket List</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#dataentry">Create New</a></li>
+        <li><a href="#display" class="ui-btn-active">Bucket List</a></li>
+        <li><a href="#explore">Explore</a></li>
+      </ul>
+    </div>
+  </div>
+ <div data-role="content">
+      <h2>Bucket List</h2>
+      <ul id="bucketlist" data-role="listview"></ul>
+    </div>
+    <li>
+     
+        <div>
+          <button class="priority-btn">Priority Levels</button>
+          <button class="completed-btn">Completed</button>
+        </div>
+    <div data-role="footer">
+      <h4>&copy; Zoe and Eyob Prog209 2023</h4>
+    </div>
+  </div>
+
+
+
+
+<div data-role="page" id="update">
+  <div data-role="header">
+    <h1>Update Progress</h1>
+  </div>
+  <div data-role="content">
+    <form id="updateForm">
+      <label for="updateProgress">Progress:</label>
+      <input type="number" name="updateProgress" id="updateProgress" value="0" min="0" max="100" required>
+      <label for="comment">Comment:</label>
+      <textarea name="comment" id="comment"></textarea>
+      <input type="submit" value="Update">
+    </form>
+    <button id="deleteButton">Delete Item</button>
+
+  </div>
+  <div data-role="footer">
+    <h4>&copy; Zoe and Eyob Prog209 2023</h4>
+  </div>
+</div>
+
+
+
+  <script src="main.js"></script>
+  
+  <script src="index.js"></script>
+</body>
+</html>
