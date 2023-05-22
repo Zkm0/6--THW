@@ -49,33 +49,36 @@ $(document).ready(function() {
     }
   
  
-    // Add click event listener 
+   
     $(document).on('click', '.bucket-list-item', function() {
       const id = this.id;
       currentItem = bucketList.find(item => item.id === id);
       
-      // Navigate 
+  
       $.mobile.navigate("#update");
     });
   
-    // Add an event listener for update form submission
+
     const updateForm = document.getElementById('updateForm');
     updateForm.addEventListener('submit', function(event) {
       event.preventDefault();
   
-      // Update the progress and comment 
+      
       const progress = document.getElementById('updateProgress').value;
       const comment = document.getElementById('comment').value;
       currentItem.progress = progress;
       currentItem.comment = comment;
-      // Navigate back to the display page
+      displayBucketList();
       $.mobile.navigate("#display");
     });
 
-    // Adding an item from the explore page
+
   $(document).on('click', '.add-item', function() {
-    const title = $(this).prev().text();
-    bucketList.push(new BucketListItem(title, '', 0, ''));
+    const title = $(this).prev().prev().text();
+    const url = $(this).prev().attr('href');
+    const description = "Please fill the description"; 
+    bucketList.push(new BucketListItem(title, description, 0, url));
+    displayBucketList();
     $.mobile.navigate("#display");
   });
 
@@ -83,13 +86,13 @@ $(document).ready(function() {
     displayBucketList();
   });
   
-    // Delete  button
+
     const deleteButton = document.getElementById('deleteButton');
     deleteButton.addEventListener('click', function() {
       const index = bucketList.findIndex(item => item.id === currentItem.id);
       bucketList.splice(index, 1);
   
-      // Navigate back to the display page
+    
       $.mobile.navigate("#display");
     });
   
